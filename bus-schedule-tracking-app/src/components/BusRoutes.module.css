@@ -1,0 +1,39 @@
+.container {
+    border: 1px solid white;
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+    /* border: 1px solid blue; */
+}
+
+.thead {
+    /* border: 1px solid red; */
+    text-align: left;
+}
+
+.tr {
+    /* border: 1px solid orange; */
+    text-align: left;
+}
+
+.thead ul {
+    list-style-type: none; /* Removes the bullet points */
+}
+
+.th {
+    text-align: left;
+}
+
+.th ul ul {
+    padding-left: 20px; /* Adds indentation for nested lists */
+}
