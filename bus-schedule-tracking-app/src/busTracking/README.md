@@ -1,5 +1,19 @@
 # Bus Stop Tracking
 
+## What this app does
+
+### Purpose
+
+When users are travelling on a new bus route, they may not know the bus stops to stop at. This bus tracking app aims to track the next nearest bus stops on the bus routes that a user is travelling. The next nearest bus stops let the user have some ideas whether they are near to their destination bus stops.
+
+### Limitation
+
+Becuase of the limitation with the CORS error, I tested the app with Chromebook and handphone mobible data. The Chromebook with run the app with `npm run dev`, just like local dev.
+
+The distance can be calculated and sorted, however, the problem is with the **location** detected. The app can only be as accurate as the location being detected on the device. 
+
+During my testing with the Chromebook on bus 196 (direction to Bedok) boarded from Commonwealth MRT bus stops, the Chromebook could not detect my location accurately. Therefore, the next nearest bus stop detected was not accurate.
+
 ## To use this component
 
 ### Step 1

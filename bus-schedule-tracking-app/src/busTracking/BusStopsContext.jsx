@@ -5,7 +5,7 @@
 import { createContext } from "react";
 import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
-import { busApi, BUS_STOPS } from "../busInfo/apiUtils";
+import { busApi, BUS_STOPS } from "../components/apiUtils";
 
 
 export const BusStopsContext = createContext(null);

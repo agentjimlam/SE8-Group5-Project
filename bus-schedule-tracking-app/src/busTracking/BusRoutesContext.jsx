@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
-import { busApi, BUS_ROUTES } from "../busInfo/apiUtils";
+import { busApi, BUS_ROUTES } from "../components/apiUtils";
 
 export const BusRoutesContext = createContext(null);
 export const BusRoutesLoadingContext = createContext(null);

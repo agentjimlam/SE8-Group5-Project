@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useState, useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
-import { busApi, BUS_SERVICES } from "../busInfo/apiUtils";
+import { busApi, BUS_SERVICES } from "../components/apiUtils";
 
 export const BusServicesContext = createContext(null);
 export const UniqueBusServicesContext = createContext(null);
