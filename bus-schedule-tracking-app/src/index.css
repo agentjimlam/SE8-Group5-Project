@@ -27,7 +27,8 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  /* To make the menu to be at the top. */
+ /*  min-height: 100vh; */
 }
 
 h1 {
