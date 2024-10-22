@@ -210,16 +210,6 @@ export function BusMain() {
     return getUniqueServiceNo();
   }, [busServices, isLoading]);
 
-  // Function that console logs the latitude longitude co-ordinates of where you click on the map
-  const LocationFinderDummy = () => {
-    const map = useMapEvents({
-      click(e) {
-        console.log("Co-ordinates clicked", e.latlng);
-      },
-    });
-    return null;
-  };
-
   return (
     <>
       {isLoading && <p>Loading ...</p>}
@@ -245,40 +235,6 @@ export function BusMain() {
                 </BusRoutesContext.Provider>
               </BusServicesContext.Provider>
             </BusStopsContext.Provider>
-
-            <div className={styles.container}>
-              <h2>Map example</h2>
-              <MapContainer
-                center={[1.2929, 103.852]} // City hall co-ordinates
-                zoom={12}
-                scrollWheelZoom={false}
-                className={styles.map}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {busStops.map((busStop) => (
-                  <Marker
-                    key={busStop.BusStopCode}
-                    position={[busStop.Latitude, busStop.Longitude]}
-                    icon={blueBusIcon}
-                  >
-                    <Popup>
-                      <div>
-                        Bus stop name: {busStop.Description}{" "}
-                        {/*Bus Stop Name eg. Opp Tanglin View*/}
-                        <br />
-                        {busStop.BusStopCode}, {busStop.RoadName}{" "}
-                        {/*eg. 10271, Alexandra Rd*/}
-                      </div>
-                    </Popup>
-                  </Marker>
-                ))}
-                <LocationMarker />
-                <LocationFinderDummy />
-              </MapContainer>
-            </div>
           </div>
         )}
     </>

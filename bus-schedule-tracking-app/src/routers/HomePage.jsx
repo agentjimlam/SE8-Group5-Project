@@ -10,6 +10,7 @@ export function HomePage(){
     <Stack gap={3} className="col-md-5 mx-auto">
       <Button as={Link} to="/bus-arrival">Bus arrival</Button>
       <Button as={Link} to="/bus-tracking">Track my bus route</Button>
+      <Button as={Link} to="/bus-stops-map">Bus Stops Map</Button>
     </Stack>
   </>
   )

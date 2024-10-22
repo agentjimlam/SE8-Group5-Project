@@ -1,3 +1,5 @@
+// LocationMarker.jsx is a component that finds user's location and displays a marker of it, and blue circle of 100m radius
+
 import L from "leaflet";
 import "leaflet/dist/leaflet.css"; // Ensure you have Leaflet's CSS
 import { useEffect, useState } from "react";
