@@ -398,7 +398,7 @@ export function BusRoutes() {
 
   return (
     <>
-      <h1>Sample bus routes</h1>
+      <h1>Bus routes</h1>
       {content}
     </>
   );

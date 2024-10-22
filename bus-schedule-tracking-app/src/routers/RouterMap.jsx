@@ -6,7 +6,7 @@ import { ErrorPage } from "./ErrorPage";
 import { HomePage } from "./HomePage";
 import { BusMain } from "../components/BusMain";
 import { BusTrackingMain } from "../busTracking/BusTrackingMain";
-import LocationMarker from "../components/LocationMarker";
+import Map from "../components/Map";
 
 
 /**Add a new component by just adding {path, element} to the children. */
@@ -30,7 +30,7 @@ export const myRouter = createBrowserRouter([
       },
       {
         path: "bus-stops-map",
-        element: <LocationMarker/>
+        element: <Map />, /*replaced with Map component as LocationMarker does not display the map, it displays just user's location marker */
       },
     ]
   }

@@ -21,6 +21,9 @@ export function RootIndex() {
               <NavDropdown.Item as={Link} to="/bus-tracking">
                 Bus Tracking
               </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/bus-stops-map">
+                Bus Stops Map
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
