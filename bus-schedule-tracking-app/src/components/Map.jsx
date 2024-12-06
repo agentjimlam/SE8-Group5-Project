@@ -1,5 +1,8 @@
 // Map component, it pre-loads all 5138 bus stops and displays them via markers
 
+// NOTE: Map.jsx is a map component for TESTING PURPOSES. 
+// It includes a LocationFinder function, which allows you to click on the leaflet Map and it will console log the Latitude and Longitude 
+
 import L from "leaflet";
 import {
   MapContainer,
