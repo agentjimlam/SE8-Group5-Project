@@ -17,3 +17,5 @@ export const busApi = axios.create({
   headers: headers,
 })
 
+// Vite proxy method only works in development mode
+// CORS-anywhere method should be used for testing and development purpose only since here you're using someone else's proxy server to call the API

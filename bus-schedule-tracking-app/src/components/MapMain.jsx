@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import "leaflet/dist/leaflet.css";
 import styles from "./MapMain.module.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -8,8 +8,14 @@ import axios from "axios";
 
 import busMarker from "../assets/busMarker.png";
 import userMarker from "../assets/userMarker.png";
+import { AuthContext } from "../store/auth-context";
 
+// This is the Main Map component used in the App. NOTE: MapMain.jsx uses CORS Anywhere to get LTA Datamall API, does not use Vite proxy method.
 function MapMain() {
+  // Step 4: Apply the useContext hook
+  const userCtx = useContext(AuthContext);
+  const { currentUsername } = userCtx; // Destructure userCtx
+
   const [busStopsCollection, setBusStopsCollection] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [userLocation, setUserLocation] = useState(null);
@@ -122,9 +128,9 @@ function MapMain() {
 
   return (
     <div className={styles.container}>
-      <h1>Map Main</h1>
+      {/* <h1>Map Main</h1> */}
       <p className={styles.busArrivalIntroText}>
-        Hello! Enable your location and we will find you. Click the{" "}
+        Hello{currentUsername ? ` ${currentUsername}` : ""}! Enable your location and we will find you. Click the{" "}
         <strong>Get Bus Stops button</strong> to get all the nearest Bus Stops
         then click on the Bus Stop you want to show the Bus Arrival times of.
       </p>

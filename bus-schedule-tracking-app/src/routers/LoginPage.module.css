@@ -1,0 +1,17 @@
+/* Sans-serif-like fonts*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat');*/ /*This works also*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* More stylised fonts */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+
+.loginPageIntroText {
+    font-family: Arima, Roboto;
+    font-size: 1.8rem;
+    font-weight: 200;
+}

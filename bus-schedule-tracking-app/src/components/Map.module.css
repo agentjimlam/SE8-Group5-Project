@@ -4,12 +4,12 @@
     flex-direction: column;
 }
 
-.mapContainer {
+/* .mapContainer {
     display: flex;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-}
+} */
 
 .map {
     height: 500px;
