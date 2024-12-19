@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useContext } from "react";
 import "leaflet/dist/leaflet.css";
 import styles from "./MapMain.module.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { icon } from "leaflet";
 import axios from "axios";
@@ -126,6 +126,16 @@ function MapMain() {
     return diffInMinutes > 0 ? diffInMinutes + " Mins" : "Arrived";
   };
 
+  // Function that console logs the latitude longitude co-ordinates of where you click on the map
+  const LocationFinderDummy = () => {
+    const map = useMapEvents({
+      click(e) {
+        console.log("Co-ordinates clicked", e.latlng);
+      },
+    });
+    return null;
+  };
+
   return (
     <div className={styles.container}>
       {/* <h1>Map Main</h1> */}
@@ -175,6 +185,7 @@ function MapMain() {
               <Popup>Your Current Location</Popup>
             </Marker>
           )}
+          <LocationFinderDummy />
         </MapContainer>
       </div>
 
