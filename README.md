@@ -2,6 +2,9 @@
 
 This is a Bus Tracking App done by students of NTU's SCTP Software Engineering Cohort 8, Group 5!
 
+To access the app:
+1. Click this link and click the "Request temporary access to the demo server" button: https://cors-anywhere.herokuapp.com/corsdemo
+2. CLick this link to access the app: https://warm-queijadas-acbd52.netlify.app/
 
 ## Guide for Git Team collaboration
 
